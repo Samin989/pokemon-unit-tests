@@ -1,6 +1,7 @@
 package com.example.springpokemon.controllers;
 
 import com.example.springpokemon.models.Pokemon;
+import com.example.springpokemon.repositories.PokedexRepository;
 import com.example.springpokemon.services.PokedexService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,11 +9,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.sql.SQLException;
-import java.util.NoSuchElementException;
 
 @Controller
 public class PokedexController {
-    private PokedexService pokeService = new PokedexService();
+    private PokedexService pokeService = new PokedexService(new PokedexRepository());
 
     @GetMapping("index")
     public ModelAndView index(){

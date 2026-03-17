@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PokedexRepository {
+public class PokedexRepository implements IPokedexRepository{
 
     public List<Pokemon> getALlFirePokemon() throws SQLException {
         List<Pokemon> allFirePokemon = new ArrayList<>();

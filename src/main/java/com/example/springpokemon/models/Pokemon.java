@@ -33,6 +33,7 @@ public class Pokemon {
         this.primaryType = primaryType;
     }
 
+
     public int getPokedexNumber() {
         return pokedexNumber;
     }
